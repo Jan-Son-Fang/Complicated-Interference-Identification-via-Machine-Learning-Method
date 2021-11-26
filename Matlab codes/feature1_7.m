@@ -1,0 +1,9 @@
+function F = feature1_7(J_normal)
+F(1)=SingleFrequencyEnergyConcentration(J_normal,1);
+F(2)=AverageSpectrumFlatnessCoefficient(J_normal);
+Faf = frft(J_normal, 3);
+F(3)=FractionalFourierTransform(Faf,1);
+F(4)=FrequencyDomainMomentKurtosisCoefficient(J_normal);
+F(5)=FrequencyDomainMomentSkewnessCoefficient(J_normal);
+F(6)=FrequencyDomainParameters(J_normal);
+F(7)=TimeDomainMomentPeakCoefficient(J_normal);
